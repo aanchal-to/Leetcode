@@ -1,4 +1,4 @@
-//1- twoSum Problem
+//1- twoSum Problem-Day1
 import java.util.*;
 class Solution{
     public static int[] twoSum(int[] nums, int target){
@@ -33,7 +33,7 @@ class Solution{
 }
 
 
-//2-PalindromeNumber
+//2-PalindromeNumber-Day1
 class Solution {
     public boolean isPalindrome(int x) {
         int temp=x;
