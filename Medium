@@ -1,1 +1,52 @@
+//1-AddTwoNumbers-Day1
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummy=new ListNode(0);
+        ListNode curr=dummy;
+        int carry=0;
 
+        while(l1 != null || l2 != null || carry == 1){
+            int sum = 0; 
+            if(l1 != null){ 
+                sum += l1.val;
+                l1 = l1.next;
+            }
+            if(l2 != null){ 
+                sum += l2.val;
+                l2 = l2.next;
+            }
+            sum += carry; 
+            carry = sum/10; 
+            ListNode node = new ListNode(sum % 10); 
+            curr.next = node; 
+            curr = curr.next; 
+        }
+        return dummy.next; 
+ 
+    }
+}
+
+//2-Longest Substring Without Repeating Characters-Day1
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        Set<Character> charSet = new HashSet<>();
+        int maxLength = 0;
+        int left = 0;
+        int right = 0;
+        
+        while (left < n && right < n) {
+            char c = s.charAt(right);
+            if (!charSet.contains(c)) {
+                charSet.add(c);
+                maxLength = Math.max(maxLength, right - left + 1);
+                right++;
+            } else {
+                charSet.remove(s.charAt(left));
+                left++;
+            }
+        }
+        
+        return maxLength;
+    }
+}
