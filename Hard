@@ -20,8 +20,40 @@ class Solution {
         }else{
             return re.get(mid);
         }
-
-
-    }
-    
+    }   
 }
+
+//2-Regular Expression Matching-Day2
+import java.util.Scanner;
+
+public class Solution {
+    public static boolean isMatch(String s, String p) {
+        if (p.isEmpty()) {
+            return s.isEmpty();
+        }
+
+        boolean firstMatch = (!s.isEmpty() && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.'));
+
+        if (p.length() >= 2 && p.charAt(1) == '*') {
+            return (isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p)));
+        } else {
+            return firstMatch && isMatch(s.substring(1), p.substring(1));
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the string: ");
+        String s = scanner.nextLine();
+
+        System.out.print("Enter the pattern: ");
+        String p = scanner.nextLine();
+
+        boolean match = isMatch(s, p);
+        System.out.println("Pattern matches string: " + match);
+
+        scanner.close();
+    }
+}
+
