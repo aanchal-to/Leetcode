@@ -27,6 +27,9 @@ The matching should cover the entire input string (not partial).
 ***Day3***
 First Question(Longest Palindromic Substring)-Medium
 Given a string s, return the longest palindromic substring in s.
+
+Second Question-(Reverse Integer)-Medium
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0
  
  
  
