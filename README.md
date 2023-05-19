@@ -17,6 +17,16 @@ Given an array of integers nums and an integer target, return indices of the two
 First Question(Median of Two Sorted Arrays)-Hard
 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 The overall run time complexity should be O(log (m+n)).
+
+Second Question(Regular Expression Matching)-Hard
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+The matching should cover the entire input string (not partial).
+
+***Day3***
+First Question(Longest Palindromic Substring)-Medium
+Given a string s, return the longest palindromic substring in s.
  
  
  
