@@ -48,10 +48,32 @@ You are given an array of k linked-lists lists, each linked-list is sorted in as
 Merge all the linked-lists into one sorted linked-list and return it.
 
 ***Day5***
- -First Question-(Container With Most Water)-Medium
+ First Question-(Container With Most Water)-Medium
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 Return the maximum amount of water a container can store.
+
+Second Question-(Zigzag Conversion)-Medium
+class Solution {
+    public String convert(String s, int numRows) {
+        if (numRows == 1) {
+            return s;
+        }
+        StringBuilder result = new StringBuilder();
+        int n = s.length();
+        int cycleLen = 2 * numRows - 2;
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j + i < n; j += cycleLen) {
+                result.append(s.charAt(j + i));
+                if (i != 0 && i != numRows - 1 && j + cycleLen - i < n) {
+                    result.append(s.charAt(j + cycleLen - i));
+                }
+            }
+        }
+        return result.toString();
+        
+    }
+}
  
  
  
