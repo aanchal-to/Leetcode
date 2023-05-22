@@ -145,3 +145,44 @@ if (numRows == 1) {
             }
         }
         return result.toString();
+       
+//6-String to Integer (atoi)-Day5
+class Solution {
+    public int myAtoi(String s) {
+        int len = s.length();
+        long num = 0; // Use a long variable to handle potential integer overflow
+        int i = 0;
+
+        // Skip leading whitespace characters
+        while (i < len && s.charAt(i) == ' ') {
+            i++;
+        }
+
+        // Check for sign (+/-) symbol
+        boolean positive = true; // Default to positive
+        if (i < len && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
+            positive = (s.charAt(i) == '+');
+            i++;
+        }
+
+        // Convert consecutive digits to an integer
+        while (i < len && Character.isDigit(s.charAt(i))) {
+            num = num * 10 + (s.charAt(i) - '0');
+
+            // Check for integer overflow
+            if (positive && num > Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
+            } else if (!positive && -num < Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
+            }
+
+            i++;
+        }
+
+        // Handle sign
+        num = positive ? num : -num;
+
+        return (int) num;
+    }
+}
+
