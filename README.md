@@ -54,26 +54,10 @@ Find two lines that together with the x-axis form a container, such that the con
 Return the maximum amount of water a container can store.
 
 Second Question-(Zigzag Conversion)-Medium
-class Solution {
-    public String convert(String s, int numRows) {
-        if (numRows == 1) {
-            return s;
-        }
-        StringBuilder result = new StringBuilder();
-        int n = s.length();
-        int cycleLen = 2 * numRows - 2;
-        for (int i = 0; i < numRows; i++) {
-            for (int j = 0; j + i < n; j += cycleLen) {
-                result.append(s.charAt(j + i));
-                if (i != 0 && i != numRows - 1 && j + cycleLen - i < n) {
-                    result.append(s.charAt(j + cycleLen - i));
-                }
-            }
-        }
-        return result.toString();
-        
-    }
-}
+The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+
+Third Question-(String to Integer (atoi))-Medium
+Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
  
  
  
