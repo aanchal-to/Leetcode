@@ -47,6 +47,11 @@ First Question-(Merge k Sorted Lists)-Hard
 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
 Merge all the linked-lists into one sorted linked-list and return it.
 
+***Day5***
+ -First Question-(Container With Most Water)-Medium
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+Return the maximum amount of water a container can store.
  
  
  
