@@ -58,6 +58,15 @@ The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of 
 
 Third Question-(String to Integer (atoi))-Medium
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
+
+***Day6***
+First Question-(3Sum)-Medium
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+
+Second Question-(3Sum Closest)-Medium
+Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
+Return the sum of the three integers.
  
  
  
