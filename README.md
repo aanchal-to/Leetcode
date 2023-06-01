@@ -67,6 +67,11 @@ Notice that the solution set must not contain duplicate triplets.
 Second Question-(3Sum Closest)-Medium
 Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
 Return the sum of the three integers.
+
+***Day7***
+First Question-(Sort Colors)-Medium
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
  
  
  
